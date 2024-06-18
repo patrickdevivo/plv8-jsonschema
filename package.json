@@ -1,0 +1,20 @@
+{
+  "name": "plv8-jsonschema",
+  "version": "1.0.0",
+  "description": "JSON schema functions for Postgres with PLV8",
+  "main": "index.js",
+  "scripts": {
+    "build:set_validator": "plv8ify generate --input-file set_validator.ts --output-folder dist",
+    "build:validate": "plv8ify generate --input-file validate.ts --output-folder dist",
+    "build": "npm run build:set_validator && npm run build:validate"
+  },
+  "author": "Patrick DeVivo <patrick.devivo@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.14.2",
+    "plv8ify": "^0.0.58"
+  },
+  "dependencies": {
+    "ajv": "^8.16.0"
+  }
+}
